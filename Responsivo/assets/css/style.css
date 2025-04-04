@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    color: #000;
+    transition: background 0.5s, color 0.5s;
+}
+
+.dark-mode {
+    background: #001f3f;
+    color: white;
+}
+
+nav {
+    width: 250px;
+    height: 100vh;
+    background: #007bff;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode nav {
+    background: #0056b3;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #0056b3;
+}
+
+main {
+    margin-left: 260px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #004080;
+    color: white;
+}
+
+.dark-mode header {
+    background: #002244;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: #66b3ff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.dark-mode .hero {
+    background: #003366;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background: #004080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode .grid-item {
+    background: #002244;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    nav {
+        width: 100px;
+    }
+    main {
+        margin-left: 110px;
+    }
+    .hero {
+        padding: 30px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

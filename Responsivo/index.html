@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Visão</a></li>
+            <li><a href="#">Analise</a></li>
+            <li><a href="#">Reporte</a></li>
+            <li><a href="#">Config</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <header>
+            <h1>Dashboard</h1>
+            <button id="darkModeToggle"></button>
+        </header>
+        
+        <section class="hero">
+            <h2>Bem Vindo</h2>
+            <p>Monitore seus dados em tempo real</p>
+        </section>
+        
+        <section class="grid-container">
+            <div class="grid-item">Vendas</div>
+            <div class="grid-item">Analises</div>
+            <div class="grid-item">Renovar</div>
+            <div class="grid-item">Trafico</div>
+        </section>
+    </main>
+    
+    <script>
+        const toggleButton = document.getElementById("darkModeToggle");
+        toggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+</html>
